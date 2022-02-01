@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.yoann.calcul.Calculs;
+
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
