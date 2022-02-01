@@ -22,12 +22,13 @@ class CalculsTest2 {
 	{
 		fail("Not yet implemented");
 	}
+	
 	static Stream<Arguments> chargerJeuDeTest2() throws Throwable 
 	{
         return  Stream.of(
-            Arguments.of(4,2,2), // appellera : testDiviser(2,2,4)
+            Arguments.of(4,2,2), // appellera : testDiviser(4,2,2)
             Arguments.of(6,6,1),
-            Arguments.of(8,2,4)
+            Arguments.of(8,0,4)
         );
     }
 	@ParameterizedTest
@@ -38,9 +39,44 @@ class CalculsTest2 {
 	        Calculs monCal = new Calculs(firstNumber, secondNumber);
 	        assertEquals(expectedResult, monCal.diviser(), "test en échec pour " + firstNumber + " / " + secondNumber + " != " + expectedResult); 
 
-	    // Partie indépendante (les paramètres peuvent ne servir qu'à une sous partie des tests)
-	        String n = null;
-	        assertNull(n);
+	   
+	}
+	
+	static Stream<Arguments> chargerJeuDeTest3() throws Throwable 
+	{
+        return  Stream.of(
+            Arguments.of(4,2,6), // appellera : testAdditionner(4,2,6)
+            Arguments.of(63,7,70),
+            Arguments.of(88,20,108)
+        );
+    }
+	@ParameterizedTest
+	@MethodSource("chargerJeuDeTest3")
+	void testDiviser(int firstNumber, int secondNumber, int expectedResult) 
+	{
+		// Partie paramétrée
+	        Calculs monCal = new Calculs(firstNumber, secondNumber);
+	        assertEquals(expectedResult, monCal.additionner(), "test en échec pour " + firstNumber + " + " + secondNumber + " != " + expectedResult); 
+
+	    
+	}
+	static Stream<Arguments> chargerJeuDeTest4() throws Throwable 
+	{
+        return  Stream.of(
+            Arguments.of(4,2,2), // appellera : testsoustraire(4,2,2)
+            Arguments.of(6,6,0),
+            Arguments.of(8,0,8)
+        );
+    }
+	@ParameterizedTest
+	@MethodSource("chargerJeuDeTest4")
+	void testDiviser(int firstNumber, int secondNumber, int expectedResult) 
+	{
+		// Partie paramétrée
+	        Calculs monCal = new Calculs(firstNumber, secondNumber);
+	        assertEquals(expectedResult, monCal.soustraire(), "test en échec pour " + firstNumber + " - " + secondNumber + " != " + expectedResult); 
+
+	   
 	}
 	
 	
