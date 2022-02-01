@@ -24,7 +24,7 @@ class CalculsTest2 {
 	}
 	static Stream<Arguments> chargerJeuDeTest2() throws Throwable 
 	{
-        return Stream.of(
+        return  Stream.of(
             Arguments.of(4,2,2), // appellera : testDiviser(2,2,4)
             Arguments.of(6,6,1),
             Arguments.of(8,2,4)
