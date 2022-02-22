@@ -28,12 +28,12 @@ class CalculsTest2 {
         return  Stream.of(
             Arguments.of(4,2,2), // appellera : testDiviser(4,2,2)
             Arguments.of(6,6,1),
-            Arguments.of(8,0,4)
+            Arguments.of(8,2,4)
         );
     }
 	@ParameterizedTest
 	@MethodSource("chargerJeuDeTest2")
-	void testDiviser(int firstNumber, int secondNumber, int expectedResult) 
+	void testDiviser1(int firstNumber, int secondNumber, int expectedResult) 
 	{
 		// Partie paramétrée
 	        Calculs monCal = new Calculs(firstNumber, secondNumber);
@@ -52,7 +52,7 @@ class CalculsTest2 {
     }
 	@ParameterizedTest
 	@MethodSource("chargerJeuDeTest3")
-	void testDiviser(int firstNumber, int secondNumber, int expectedResult) 
+	void testAdditionner(int firstNumber, int secondNumber, int expectedResult) 
 	{
 		// Partie paramétrée
 	        Calculs monCal = new Calculs(firstNumber, secondNumber);
@@ -70,7 +70,7 @@ class CalculsTest2 {
     }
 	@ParameterizedTest
 	@MethodSource("chargerJeuDeTest4")
-	void testDiviser(int firstNumber, int secondNumber, int expectedResult) 
+	void testSoustraire(int firstNumber, int secondNumber, int expectedResult) 
 	{
 		// Partie paramétrée
 	        Calculs monCal = new Calculs(firstNumber, secondNumber);
