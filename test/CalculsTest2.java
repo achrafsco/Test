@@ -18,9 +18,9 @@ import org.junit.runners.Parameterized;
 class CalculsTest2 {
 
 	@Test
-	void test() 
+	void test()  
 	{
-		//fail("Not yet implemented");
+		fail("Not yet implemented");
 	}
 	
 	static Stream<Arguments> chargerJeuDeTest2() throws Throwable 

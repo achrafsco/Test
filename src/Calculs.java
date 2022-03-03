@@ -10,6 +10,7 @@ public class Calculs
                 this.operande2 = operande2;
         }
         
+        
         public int multiplier()
         {
                 return operande1 * operande2;
